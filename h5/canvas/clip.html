@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #drawing {
+        /* background-color: red; */
+        /* width: 600px;
+        height: 600px; */
+        border: solid 1px #d3d3d3;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="drawing" width='400' height='300'>A drawing of something</canvas>
+    <canvas id="drawing2" width='400' height='300'>A drawing of something</canvas>
+    <script>
+        let dr = document.getElementById('drawing')
+        let ctx = dr.getContext('2d')
+
+        ctx.rect(50, 20, 200, 120)
+        ctx.stroke()
+        ctx.fillStyle = 'green'
+        ctx.fillRect(0, 0, 150, 100)
+
+        let dr2 = document.getElementById('drawing2')
+        let ctx2 = dr2.getContext('2d')
+
+        ctx2.rect(50, 20, 200, 120)
+        ctx2.stroke()
+        ctx2.clip()
+        ctx2.fillStyle = 'red'
+        ctx2.fillRect(0, 0, 150, 100)
+
+    </script>
+</body>
+</html>

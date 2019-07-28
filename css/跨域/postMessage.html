@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>接收端</title>
+</head>
+<body>
+    <div>
+        <input type="text" value="mww" id="text">
+        <button id="send">发送消息</button>
+    </div>
+    <iframe id="receiver" src="http://receive.com/static/htmlreceiver.html"></iframe>
+    <script>
+        window.onload = function () {
+            let receiver = document.getElementById('receiver').contentWindow;
+            let btn = document.getElementById('send')
+            btn.addEventListner('click', function(e){
+                e.preventDefault();
+                let val = document.getElementById('text').value;
+                receiver.postMessage(JSON.stringify(val), 'http://www.baidu.com')
+            })
+        }
+    </script>
+</body>
+</html>

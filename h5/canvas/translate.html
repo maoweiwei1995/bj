@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #drawing {
+        /* background-color: red; */
+        /* width: 600px;
+        height: 600px; */
+        border: solid 1px #d3d3d3;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="drawing" width='400' height='300'>A drawing of something</canvas>
+    <script>
+        let dr = document.getElementById('drawing')
+        let arc = dr.getContext('2d')
+        arc.beginPath()
+        arc.arc(150, 75, 70, 0, 2*Math.PI)
+        arc.stroke()
+
+        arc.moveTo(215, 75)
+        arc.arc(150, 75, 65, 0, 2*Math.PI)
+        arc.stroke()
+
+        arc.translate(150, 75)
+        arc.textBaseline = 'middle'
+        arc.fillText('3', 50, 0)
+
+        arc.textAlign = 'center'
+        arc.fillText('6', 0, 55)
+        arc.fillText('9', -55, 0)
+        arc.fillText('12', 0, -55)
+
+        arc.moveTo(0, 0)
+        arc.lineTo(35, 0)
+        arc.moveTo(0, 0)
+        arc.lineTo(0,-50)
+
+        arc.stroke()
+    </script>
+</body>
+</html>

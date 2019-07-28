@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #drawing {
+        /* background-color: red; */
+        /* width: 600px;
+        height: 600px; */
+        border: solid 1px #d3d3d3;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="drawing" width='400' height='300'>A drawing of something</canvas>
+    <script>
+        let dr = document.getElementById('drawing')
+        let rect = dr.getContext('2d')
+        rect.beginPath()
+        rect.lineWidth = 8
+        rect.strokeStyle = 'red'
+        rect.rect(5, 5, 200, 200)
+        rect.stroke()
+
+        rect.beginPath()
+        rect.lineWidth = 8
+        rect.strokeStyle = 'green'
+        rect.rect(5, 5, 150, 150)
+        rect.stroke()
+    </script>
+</body>
+</html>

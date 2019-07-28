@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #boxshadow {
+            width: 600px;
+            position: relative;
+            padding:10px;
+            background-color: white;
+            box-shadow: 1px 2px 4px rgb(0, 0, 0, .5);
+        }
+        #boxshadow img {
+            border:1px solid #8a4419;
+            border-style:inset;
+        }
+        #boxshadow::after {
+            position:absolute;
+            bottom: 0;
+            content:'';
+            -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            height: 100px;
+            width:70%;
+            left: 15%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxshadow">
+        <img src="http://k.zol-img.com.cn/sjbbs/7692/a7691515_s.jpg" alt="Norway" width="600" height="400">
+    </div>
+</body>
+</html>
