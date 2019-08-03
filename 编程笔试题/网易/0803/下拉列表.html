@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .dropbtn {
+        background-color: black;
+        color: white;
+        width: 100px;
+        height: 40px;
+        border: 1px solid #888;
+    }
+    .dropbtn:hover {
+        background-color: white;
+        color: red;
+        border: 1px solid #888;
+    }
+    .dropdown .dropdown-content {
+        display: none;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-item {
+        background-color: white;
+        color: black;
+        width: 100px;
+        height: 40px;
+        border: 1px solid #ccc;
+    }
+    .dropdown-item:hover {
+        background-color: red;
+    }
+    .dropdown-item:hover a {
+        color: white;
+    }
+    .dropdown-item  a {
+        color: #555;
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <div class="dropbtn">下拉菜单按钮</div>
+        <div class="dropdown-content">
+            <div class="dropdown-item"><a href="#">选项1</a></div>
+            <div class="dropdown-item"><a href="#">选项2</a></div>
+            <div class="dropdown-item"><a href="#">选项3</a></div>
+            <div class="dropdown-item"><a href="#">选项4</a></div>
+        </div>
+    </div>
+</body>
+</html>
