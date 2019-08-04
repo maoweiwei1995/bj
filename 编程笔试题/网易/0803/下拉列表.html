@@ -6,52 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    .dropbtn {
-        background-color: black;
-        color: white;
-        width: 100px;
-        height: 40px;
-        border: 1px solid #888;
-    }
-    .dropbtn:hover {
-        background-color: white;
-        color: red;
-        border: 1px solid #888;
-    }
-    .dropdown .dropdown-content {
-        display: none;
-    }
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-    .dropdown-item {
-        background-color: white;
-        color: black;
-        width: 100px;
-        height: 40px;
-        border: 1px solid #ccc;
-    }
-    .dropdown-item:hover {
-        background-color: red;
-    }
-    .dropdown-item:hover a {
-        color: white;
-    }
-    .dropdown-item  a {
-        color: #555;
-        text-decoration: none;
-    }
+        .menu {
+            list-style:none;
+        }
+        .dropdown {
+            float:left;
+        }
+        .dropdown:hover .dropdown-btn {
+            background-color: white;
+            color: red;
+        }        
+        .dropdown .dropdown-content {
+            display:none;
+        }
+        .dropdown:hover .dropdown-content {
+            display:block;
+        }
+
+        .dropdown-btn {
+            width:100px;
+            height:30px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .dropdown-btn:hover {
+            background-color: white;
+            color: red;
+        }
+        .dropdown-content {
+            width:100px;
+            height:30px;
+        }
+        .dropdown-item {
+            width:100px;
+            height:30px;
+            background-color: #ddd;
+            color: black;
+            text-align:center;
+        }
+        .dropdown-item a {
+            text-decoration: none;
+        }
+        .dropdown-item:hover {
+            background-color: red;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <div class="dropdown">
-        <div class="dropbtn">下拉菜单按钮</div>
-        <div class="dropdown-content">
-            <div class="dropdown-item"><a href="#">选项1</a></div>
-            <div class="dropdown-item"><a href="#">选项2</a></div>
-            <div class="dropdown-item"><a href="#">选项3</a></div>
-            <div class="dropdown-item"><a href="#">选项4</a></div>
-        </div>
-    </div>
+    <ul class="menu">
+        <li class="dropdown">
+            <div class="dropdown-btn">下拉菜单</div>
+            <div class="dropdown-content">
+                <div class="dropdown-item"><a href="#">选项1</a></div>
+                <div class="dropdown-item"><a href="#">选项2</a></div>
+                <div class="dropdown-item"><a href="#">选项3</a></div>
+                <div class="dropdown-item"><a href="#">选项4</a></div>
+            </div>
+        </li>
+        <li class="dropdown">
+            <div class="dropdown-btn">下拉菜单</div>
+            <div class="dropdown-content">
+                <div class="dropdown-item"><a href="#">选项1</a></div>
+                <div class="dropdown-item"><a href="#">选项2</a></div>
+                <div class="dropdown-item"><a href="#">选项3</a></div>
+                <div class="dropdown-item"><a href="#">选项4</a></div>
+            </div>
+        </li>
+    </ul>
 </body>
 </html>
